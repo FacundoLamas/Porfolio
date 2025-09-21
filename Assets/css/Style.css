@@ -1,186 +1,118 @@
-/* Normalizador */
-* {
+body {
   padding: 0;
   margin: 0;
+  background-color: rgb(86, 20, 126);
+}
+body header {
+  background-color: rgba(122, 33, 205, 0.8);
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
-  overflow-wrap: break-word;
-  overflow: visible;
-}
-
-/* Inicio de el header */
-header {
-  background-color: rgb(100, 149, 237);
-  height: 8%;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  position: fixed;
-  z-index: 1000;
-}
-
-/* Texto principal del header */
-header #TextoSuperior {
-  flex-direction: column;
-  justify-items: end;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: grid;
+  justify-content: center;
   align-content: center;
-  text-decoration: underline;
-  text-decoration-color: black;
-  color: white;
-  font-size: 1em;
+  justify-items: center;
+  grid-template-columns: 100%;
+}
+body header div {
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
   letter-spacing: 1px;
 }
-
-/* Configuarcion del menu de navegacion */
-header #MenuNavegacion {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 60%;
-  justify-content: space-between;
+body header div h1 {
+  font-size: 40px;
+  margin: 0 0 10 0;
 }
-
-header #MenuNavegacion div {
-  display: block;
-  width: 15%;
-  box-sizing: border-box;
-  background-color: rgb(58, 91, 151);
-  text-align: center;
-  border: solid;
-  border-color: white;
+body header div p {
+  margin: 0 0 10 0;
+  font-size: 20px;
 }
-
-header #MenuNavegacion a {
-  text-decoration: none;
-  color: white;
-  font-size: 100%;
-}
-
-/* Fin del Header */
-body {
-  background-color: dodgerblue;
+body header nav {
+  background-color: rgb(96, 24, 162);
   width: 100%;
   height: 100%;
 }
-
-/* Inicio del index */
-/* Index Zona Tecnologia */
-body #imagenesindex {
-  display: grid;
-  width: 30%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  position: absolute;
-  left: 70%;
-  top: 30%;
-  align-items: center;
-  justify-items: center;
-}
-
-body #imagenesindex img {
-  width: 70%;
-}
-
-body #TituloTecnologias {
-  position: absolute;
-  left: 80%;
-  top: 20%;
-  font-size: 24px;
-}
-
-body #TituloTecnologias p {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: whitesmoke;
-  text-decoration: underline;
-  text-decoration-color: black;
-}
-
-/* Fin de zona de tecnologias */
-/* Informacion Mia index */
-body #Fullstack {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  font-size: 180%;
-}
-
-body #Fullstack p {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-style: italic;
-  text-align: right;
-  text-decoration: underline;
-  color: whitesmoke;
-  text-decoration-color: black;
-}
-
-body #FotoMia {
-  position: absolute;
-  width: 20%;
-  height: 30%;
-  right: 35%;
-  top: 25%;
-  border: solid;
-  border-radius: 50% 50% 50% 50%;
-  overflow: hidden;
-  border: 0px;
-}
-
-body #FotoMia img {
-  width: 100%;
-}
-
-/* FIn Info mia Index */
-/* Inicio Aboutme */
-.aboutme_main {
-  width: 100%;
-  height: 60%;
-  display: grid;
-  position: absolute;
-  top: 20%;
-  justify-content: center;
-  grid-template-columns: 60% 40%;
-  grid-template-rows: 33% 33% 33%;
-  align-items: center;
-  align-content: space-between;
-  background-color: rgba(233, 203, 73, 0.816);
-}
-
-.aboutme_main_div_descripcion {
-  grid-row-start: 1;
-  grid-row-end: 3;
-  color: whitesmoke;
-}
-
-.aboutme_main_div_fotomia {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  border: solid;
-  border-radius: 50% 50% 50% 50%;
-  overflow: hidden;
-  border: 0px;
-}
-
-.aboutme_main_div_fotomia img {
-  width: 100%;
-}
-
-.aboutme_main_div_img {
-  grid-row-start: 3;
+body header nav ul {
+  margin-left: 2%;
+  padding: 0;
+  justify-content: flex-start;
   display: flex;
-  gap: 30px;
+  flex-direction: row;
+}
+body header nav ul li {
+  list-style: none;
+  padding: 10px;
+  margin-left: 1%;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+body header nav ul li .Pagina-Activa {
+  color: white;
 }
 
-.aboutme_main_div_img img {
-  width: 100px;
+.aboutme {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.aboutme section {
+  display: flex;
+  justify-content: flex-start;
+}
+.aboutme section div {
+  width: 66%;
+  padding-top: 30px;
+}
+.aboutme section div img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+.aboutme section div p {
+  font-size: 20px;
+  color: white;
+  margin: 0;
+}
+.aboutme section .fotomia {
+  width: 33%;
+  align-items: center;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+}
+
+.Educacion {
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 100%;
+}
+.Educacion .educaciontxt {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+}
+.Educacion .Fila {
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+}
+.Educacion .Fila .columna {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Educacion .Fila .columna img {
+  max-width: 80%;
+  min-width: 80%;
+  padding: 5%;
 }
 
 footer {
-  position: fixed;
-  bottom: 1px;
-  font-size: 16px;
-  color: azure;
-  background-color: rgb(100, 149, 237);
-  display: block;
-  width: 100%;
-}/*# sourceMappingURL=Style.css.map */
+  display: flex;
+  background-color: rgb(96, 24, 162);
+}
+footer div p {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
