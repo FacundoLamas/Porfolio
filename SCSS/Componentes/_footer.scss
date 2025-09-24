@@ -1,0 +1,11 @@
+@use "variables";
+footer{
+    display: flex;
+    background-color: variables.$color-primario;
+    div{
+        p{
+            color: white;
+        }
+    }
+    
+}

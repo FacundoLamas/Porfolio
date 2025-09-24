@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   padding: 0;
   margin: 0;
@@ -115,4 +116,49 @@ footer {
 }
 footer div p {
   color: white;
+}
+
+.Reseñas {
+  margin-bottom: 10%;
+}
+.Reseñas .Fila {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.Reseñas .Fila .columna {
+  justify-items: center;
+  align-items: center;
+}
+.Reseñas .Fila .columna p {
+  color: white;
+}
+.Reseñas .Fila .columna div {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.Reseñas .Fila .columna div img {
+  width: 80%;
+  display: block;
+}
+.Reseñas .Fila .columna div p {
+  display: block;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.775);
+  z-index: 1000;
+  position: absolute;
+  font-size: x-small;
+  width: 80%;
+  bottom: 0%;
+  height: 40%;
+  text-align: center;
+}
+.Reseñas .Fila .columna div p a {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 70%;
+  right: 45%;
+  font-size: large;
 }/*# sourceMappingURL=style.css.map */

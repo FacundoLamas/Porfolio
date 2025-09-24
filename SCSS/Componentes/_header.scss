@@ -1,0 +1,59 @@
+@use "variables";
+
+//Header
+body{
+    padding: 0;
+    margin: 0;
+    background-color:variables.$color-secundario;
+    header{
+        background-color: variables.$color-terciario;
+        box-sizing: border-box;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        grid-template-columns: 100%;
+        div{
+            width: 100%;
+            text-align: center;
+            color: whitesmoke;
+            letter-spacing: 1px;
+            h1{
+                font-size: 40px;
+                margin: 0 0 10 0;
+            }
+            p{
+                margin: 0 0 10 0;
+                font-size: 20px;
+            }
+        }
+        nav{
+            background-color: variables.$color-primario;
+            width: 100%;
+            height: 100%;
+            ul{
+                margin-left: 2%;
+                padding: 0;
+                justify-content: flex-start;
+                display: flex;
+                flex-direction: row;
+                li{
+                    a{
+                        text-decoration:none;
+                        color: black;
+                        font-size: large;
+                    }
+                    .Pagina-Activa{
+                        color: white;
+                    }
+                    list-style: none;
+                    padding: 10px;
+                    margin-left: 1%;
+
+                }
+            }
+
+        }
+    }
+}
