@@ -1,14 +1,22 @@
 @use "../Componentes/variables";
 .Reseñas{
+    margin-bottom: 10%;
+    @media (max-width: 768px){
+        width: 100%;
+    }
     .Fila{
         display: grid;
         grid-template-rows: 50% 50%;
         grid-template-columns: 1fr 1fr 1fr;
+        @media (max-width: 768px){
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+        }
         .columna{
             justify-items: center;
             align-items: center;
             p{
-                color: white;
+                @extend .texto
             }
             div{
                 display: flex;
@@ -29,9 +37,11 @@
                     bottom: 0%;
                     height: 40%;
                     text-align: center;
+                    
                     a{
                         text-decoration: none;
-                        color: white;
+                        
+                        @extend .texto;
                         position: absolute;
                         top: 70%;
                         right: 45%;
@@ -42,5 +52,5 @@
             }
         }
     }
-    margin-bottom: 10%;
+    
 }

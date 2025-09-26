@@ -38,11 +38,18 @@ body{
                 justify-content: flex-start;
                 display: flex;
                 flex-direction: row;
+                @media (max-width: 768px){
+                    margin:0;
+                }
                 li{
                     a{
                         text-decoration:none;
                         color: black;
                         font-size: large;
+                    }
+                    @media (max-width: 768px){
+                        margin:0;
+                        padding: 10 5 10 5;
                     }
                     .Pagina-Activa{
                         color: white;

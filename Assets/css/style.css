@@ -1,4 +1,11 @@
 @charset "UTF-8";
+.texto, .Reseñas .Fila .columna p, .Reseñas .Fila .columna div p a, .aboutme section div p {
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -40,6 +47,11 @@ body header nav ul {
   display: flex;
   flex-direction: row;
 }
+@media (max-width: 768px) {
+  body header nav ul {
+    margin: 0;
+  }
+}
 body header nav ul li {
   list-style: none;
   padding: 10px;
@@ -49,6 +61,12 @@ body header nav ul li a {
   text-decoration: none;
   color: black;
   font-size: large;
+}
+@media (max-width: 768px) {
+  body header nav ul li {
+    margin: 0;
+    padding: 10 5 10 5;
+  }
 }
 body header nav ul li .Pagina-Activa {
   color: white;
@@ -60,24 +78,49 @@ body header nav ul li .Pagina-Activa {
   box-sizing: border-box;
 }
 .aboutme section {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+@media (max-width: 768px) {
+  .aboutme section {
+    grid-template-columns: 1fr;
+  }
 }
 .aboutme section div {
-  width: 66%;
+  width: 2fr;
   padding-top: 30px;
+}
+@media (max-width: 768px) {
+  .aboutme section div {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
 }
 .aboutme section div img {
   border-radius: 10px;
   max-width: 100%;
 }
+@media (max-width: 768px) {
+  .aboutme section div img {
+    width: 100%;
+  }
+}
 .aboutme section div p {
   font-size: 20px;
   color: white;
+  text-align: left;
   margin: 0;
 }
+@media (max-width: 768px) {
+  .aboutme section div p {
+    padding: 5%;
+    width: 80%;
+    text-align: center;
+  }
+}
 .aboutme section .fotomia {
-  width: 33%;
+  width: 1fr;
   align-items: center;
   padding-left: 30px;
   padding-bottom: 30px;
@@ -86,7 +129,7 @@ body header nav ul li .Pagina-Activa {
 
 .Educacion {
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 15% 85%;
   grid-template-columns: 100%;
 }
 .Educacion .educaciontxt {
@@ -94,10 +137,11 @@ body header nav ul li .Pagina-Activa {
   justify-content: center;
   width: 100%;
   color: white;
+  padding-bottom: 5%;
 }
 .Educacion .Fila {
   display: grid;
-  grid-template-columns: 40% 20% 40%;
+  grid-template-columns: 2fr 1fr 2fr;
 }
 .Educacion .Fila .columna {
   display: flex;
@@ -121,17 +165,25 @@ footer div p {
 .Reseñas {
   margin-bottom: 10%;
 }
+@media (max-width: 768px) {
+  .Reseñas {
+    width: 100%;
+  }
+}
 .Reseñas .Fila {
   display: grid;
   grid-template-rows: 50% 50%;
   grid-template-columns: 1fr 1fr 1fr;
 }
+@media (max-width: 768px) {
+  .Reseñas .Fila {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
 .Reseñas .Fila .columna {
   justify-items: center;
   align-items: center;
-}
-.Reseñas .Fila .columna p {
-  color: white;
 }
 .Reseñas .Fila .columna div {
   display: flex;
@@ -156,7 +208,6 @@ footer div p {
 }
 .Reseñas .Fila .columna div p a {
   text-decoration: none;
-  color: white;
   position: absolute;
   top: 70%;
   right: 45%;
