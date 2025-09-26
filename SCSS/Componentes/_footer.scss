@@ -1,7 +1,7 @@
 @use "variables";
 footer{
     display: flex;
-    background-color: variables.$color-primario;
+    background: linear-gradient(90deg, purple, rgb(75, 39, 160));
     div{
         p{
             color: white;
