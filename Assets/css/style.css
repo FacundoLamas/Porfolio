@@ -1,15 +1,24 @@
-@charset "UTF-8";
-.texto, .Reseñas .Fila .columna p, .Reseñas .Fila .columna div p a, .aboutme section div p {
+.texto, .proyectos .Fila .columna p, .proyectos .Fila .columna div p a, .aboutme section div p {
   color: white;
   letter-spacing: 2px;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+@keyframes AnimacionEntrada {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(90deg, purple, rgb(75, 39, 160));
+  background: radial-gradient(circle, purple, rgb(75, 39, 160));
 }
 body header {
   background: linear-gradient(90deg, purple, rgb(75, 39, 160));
@@ -20,6 +29,7 @@ body header {
   align-content: center;
   justify-items: center;
   grid-template-columns: 100%;
+  animation: AnimacionEntrada 0.6s ease-out 0s none;
 }
 body header div {
   width: 100%;
@@ -37,6 +47,9 @@ body header div p {
 }
 body header nav {
   background: linear-gradient(90deg, purple, rgb(60, 32, 126));
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
   width: 100%;
   height: 100%;
 }
@@ -78,6 +91,7 @@ body header nav ul li .Pagina-Activa {
   box-sizing: border-box;
 }
 .aboutme section {
+  animation: AnimacionEntrada 0.8s ease-out 0s none;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
@@ -111,6 +125,7 @@ body header nav ul li .Pagina-Activa {
   color: white;
   text-align: left;
   margin: 0;
+  animation: AnimacionEntrada 1.2s ease-out 0s none;
 }
 @media (max-width: 768px) {
   .aboutme section div p {
@@ -125,12 +140,14 @@ body header nav ul li .Pagina-Activa {
   padding-left: 30px;
   padding-bottom: 30px;
   padding-right: 20px;
+  animation: AnimacionEntrada 1.2s ease-out 0s none;
 }
 
 .Educacion {
   display: grid;
   grid-template-rows: 15% 85%;
   grid-template-columns: 100%;
+  animation: AnimacionEntrada 0.8s ease-out 0s none;
 }
 .Educacion .educaciontxt {
   display: flex;
@@ -156,45 +173,69 @@ body header nav ul li .Pagina-Activa {
 
 footer {
   display: flex;
-  background: linear-gradient(90deg, purple, rgb(75, 39, 160));
+  background: linear-gradient(180deg, purple, rgb(75, 39, 160));
 }
 footer div p {
   color: white;
 }
 
-.Reseñas {
+.proyectos {
   margin-bottom: 10%;
 }
 @media (max-width: 768px) {
-  .Reseñas {
+  .proyectos {
     width: 100%;
   }
 }
-.Reseñas .Fila {
+.proyectos .Fila {
   display: grid;
   grid-template-rows: 50% 50%;
   grid-template-columns: 1fr 1fr 1fr;
 }
 @media (max-width: 768px) {
-  .Reseñas .Fila {
+  .proyectos .Fila {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
   }
 }
-.Reseñas .Fila .columna {
+.proyectos .Fila #Proyecto1 {
+  opacity: 0;
+  animation: AnimacionEntrada 0.6s linear 0s forwards;
+}
+.proyectos .Fila #Proyecto2 {
+  opacity: 0;
+  animation: AnimacionEntrada 0.6s linear 0.8s forwards;
+}
+.proyectos .Fila #Proyecto3 {
+  opacity: 0;
+  animation: AnimacionEntrada 0.6s linear 1.4s forwards;
+}
+.proyectos .Fila #Proyecto4 {
+  opacity: 0;
+  animation: AnimacionEntrada 0.6s linear 2s forwards;
+}
+.proyectos .Fila #Proyecto5 {
+  opacity: 0;
+  animation: AnimacionEntrada 0.6s linear 2.6s forwards;
+}
+.proyectos .Fila #Proyecto6 {
+  opacity: 0;
+  animation: AnimacionEntrada 0.6s linear 3.2s forwards;
+}
+.proyectos .Fila .columna {
   justify-items: center;
   align-items: center;
 }
-.Reseñas .Fila .columna div {
+.proyectos .Fila .columna div {
   display: flex;
   justify-content: center;
   position: relative;
 }
-.Reseñas .Fila .columna div img {
+.proyectos .Fila .columna div img {
   width: 80%;
   display: block;
 }
-.Reseñas .Fila .columna div p {
+.proyectos .Fila .columna div p {
   display: block;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.775);
@@ -206,7 +247,7 @@ footer div p {
   height: 40%;
   text-align: center;
 }
-.Reseñas .Fila .columna div p a {
+.proyectos .Fila .columna div p a {
   text-decoration: none;
   position: absolute;
   top: 70%;

@@ -8,3 +8,13 @@ $color-terciario: rgb(122, 33, 205, 0.800);
     text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+@keyframes AnimacionEntrada {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }

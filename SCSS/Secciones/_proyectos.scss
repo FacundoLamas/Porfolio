@@ -1,5 +1,5 @@
 @use "../Componentes/variables";
-.Reseñas{
+.proyectos{
     margin-bottom: 10%;
     @media (max-width: 768px){
         width: 100%;
@@ -8,9 +8,35 @@
         display: grid;
         grid-template-rows: 50% 50%;
         grid-template-columns: 1fr 1fr 1fr;
+        
         @media (max-width: 768px){
             grid-template-rows: 1fr;
             grid-template-columns: 1fr;
+        }
+        // Animaciones
+        #Proyecto1{
+            opacity: 0;
+            animation: AnimacionEntrada 0.6s linear 0s forwards;
+        }
+        #Proyecto2{
+            opacity: 0;
+            animation: AnimacionEntrada 0.6s linear 0.8s forwards;
+        }
+        #Proyecto3{
+            opacity: 0;
+            animation: AnimacionEntrada 0.6s linear 1.4s forwards;
+        }
+        #Proyecto4{
+            opacity: 0;
+            animation: AnimacionEntrada 0.6s linear 2s forwards;
+        }
+        #Proyecto5{
+            opacity: 0;
+            animation: AnimacionEntrada 0.6s linear 2.6s forwards;
+        }
+        #Proyecto6{
+            opacity: 0;
+            animation: AnimacionEntrada 0.6s linear 3.2s forwards;
         }
         .columna{
             justify-items: center;

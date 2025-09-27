@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     section{
+        animation: AnimacionEntrada 0.8s ease-out 0s none;
         display: grid;
         grid-template-columns: 1fr 2fr ;
         @media (max-width: 768px) {
@@ -30,6 +31,7 @@
                 @extend .texto;
                 text-align: left;
                 margin: 0;
+                animation: AnimacionEntrada 1.2s ease-out 0s none;
                 @media (max-width: 768px){
                     padding: 5%;
                     width: 80%;
@@ -43,6 +45,7 @@
                 padding-left: 30px;
                 padding-bottom: 30px;
                 padding-right: 20px;
+                animation: AnimacionEntrada 1.2s ease-out 0s none;
             }
         
     }
@@ -51,6 +54,7 @@
     display: grid;
     grid-template-rows: 15% 85%;
     grid-template-columns: 100%;
+    animation: AnimacionEntrada 0.8s ease-out 0s none;
     .educaciontxt{
         display: flex;
         justify-content: center;
