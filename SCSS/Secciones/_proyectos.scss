@@ -48,8 +48,10 @@
                 display: flex;
                 justify-content: center;
                 position: relative;
+                border: solid,black,5px;
+                width: 90%;
                 img{
-                    width: 80%;
+                    width: 100%;
                     display: block;
                 }
                 p{
@@ -59,7 +61,7 @@
                     z-index: 1000;
                     position:absolute;
                     font-size: x-small;
-                    width: 80%;
+                    width: 100%;
                     bottom: 0%;
                     height: 40%;
                     text-align: center;

@@ -15,6 +15,16 @@
     transform: scale(1);
   }
 }
+@keyframes Encabezado {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   padding: 0;
   margin: 0;
@@ -29,7 +39,7 @@ body header {
   align-content: center;
   justify-items: center;
   grid-template-columns: 100%;
-  animation: AnimacionEntrada 0.6s ease-out 0s none;
+  animation: Encabezado 0.8s ease-out 0s none;
 }
 body header div {
   width: 100%;
@@ -230,9 +240,11 @@ footer div p {
   display: flex;
   justify-content: center;
   position: relative;
+  border: solid, black, 5px;
+  width: 90%;
 }
 .proyectos .Fila .columna div img {
-  width: 80%;
+  width: 100%;
   display: block;
 }
 .proyectos .Fila .columna div p {
@@ -242,7 +254,7 @@ footer div p {
   z-index: 1000;
   position: absolute;
   font-size: x-small;
-  width: 80%;
+  width: 100%;
   bottom: 0%;
   height: 40%;
   text-align: center;
