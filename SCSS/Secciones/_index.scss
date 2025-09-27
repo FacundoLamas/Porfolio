@@ -1,0 +1,62 @@
+@use "../Componentes/variables";
+
+body{
+    .index{
+        .Fila{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: [Uno] 25% [Dos] 25% [Tres] 25% [Cuatro] 25% [Cinco];
+            
+            .Presentacion{
+                opacity: 0;
+                grid-column: Dos/Cuatro ;
+                text-align: center;
+                background: radial-gradient(circle, purple, rgb(75, 39, 160));
+                margin: 5%;
+                font-size: larger;
+                animation: AnimacionEntrada 0.6s ease-out 0s forwards;
+                @extend .texto;
+                @media (max-width:768px){
+                    grid-column: Uno/Cinco;
+                }
+            }
+            .Botones{
+                opacity: 0;
+                display: flex;
+                justify-content: space-between;
+                grid-column: Dos/Cuatro;
+                margin: 5%;
+                animation: AnimacionEntrada 0.6s ease-out 0.6s forwards;
+                @media (max-width:768px){
+                    grid-column: Uno/Cinco;
+                    font-size: large;
+                }
+                button{
+                    background: none;
+                    border: none;
+                    @extend .texto;
+                    text-decoration: underline double ;
+                }
+            }
+            .Hero{
+                opacity: 0;
+                grid-column: Uno/Cinco ;
+                text-align: center;
+                background: linear-gradient( purple, rgb(75, 39, 160));
+                font-size: large;
+                animation: AnimacionEntrada 0.6s ease-out 1.2s forwards;
+                @extend .texto;
+                
+            }
+            .CTA{
+                opacity: 0;
+                grid-column: Uno/Cinco ;
+                text-align: center;
+                background: Linear-gradient( purple, rgb(75, 39, 160));
+                @extend .texto;
+                margin-bottom: 5%;
+                animation: AnimacionEntrada 0.6s ease-out 1.8s forwards ;
+            }
+        }
+    }
+}

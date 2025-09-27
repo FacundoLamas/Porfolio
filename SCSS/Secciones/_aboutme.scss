@@ -11,7 +11,7 @@
             grid-template-columns: 1fr;
             }
         div{
-            width: 2fr;
+            
             padding-top: 30px;
             @media (max-width: 768px) {
                 display: flex;
@@ -40,7 +40,6 @@
             }
         }
         .fotomia{
-                width: 1fr;
                 align-items: center;
                 padding-left: 30px;
                 padding-bottom: 30px;
@@ -64,7 +63,8 @@
     }
     .Fila{
         display: grid;
-        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-columns: 2fr  2fr;
+        column-gap: 10%;
         .columna{
             display: flex;
             justify-content: center;

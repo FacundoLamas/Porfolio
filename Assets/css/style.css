@@ -1,4 +1,4 @@
-.texto, .proyectos .Fila .columna p, .proyectos .Fila .columna div p a, .aboutme section div p {
+.texto, body .index .Fila .Presentacion, body .index .Fila .Botones button, body .index .Fila .Hero, body .index .Fila .CTA, .proyectos .Fila .columna p, .proyectos .Fila .columna div p a, .aboutme section div p {
   color: white;
   letter-spacing: 2px;
   text-align: center;
@@ -111,7 +111,6 @@ body header nav ul li .Pagina-Activa {
   }
 }
 .aboutme section div {
-  width: 2fr;
   padding-top: 30px;
 }
 @media (max-width: 768px) {
@@ -145,7 +144,6 @@ body header nav ul li .Pagina-Activa {
   }
 }
 .aboutme section .fotomia {
-  width: 1fr;
   align-items: center;
   padding-left: 30px;
   padding-bottom: 30px;
@@ -168,7 +166,9 @@ body header nav ul li .Pagina-Activa {
 }
 .Educacion .Fila {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-columns: 2fr 2fr;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
 }
 .Educacion .Fila .columna {
   display: flex;
@@ -265,4 +265,60 @@ footer div p {
   top: 70%;
   right: 45%;
   font-size: large;
+}
+
+body .index .Fila {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: [Uno] 25% [Dos] 25% [Tres] 25% [Cuatro] 25% [Cinco];
+}
+body .index .Fila .Presentacion {
+  opacity: 0;
+  grid-column: Dos/Cuatro;
+  text-align: center;
+  background: radial-gradient(circle, purple, rgb(75, 39, 160));
+  margin: 5%;
+  font-size: larger;
+  animation: AnimacionEntrada 0.6s ease-out 0s forwards;
+}
+@media (max-width: 768px) {
+  body .index .Fila .Presentacion {
+    grid-column: Uno/Cinco;
+  }
+}
+body .index .Fila .Botones {
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  grid-column: Dos/Cuatro;
+  margin: 5%;
+  animation: AnimacionEntrada 0.6s ease-out 0.6s forwards;
+}
+@media (max-width: 768px) {
+  body .index .Fila .Botones {
+    grid-column: Uno/Cinco;
+    font-size: large;
+  }
+}
+body .index .Fila .Botones button {
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline double;
+          text-decoration: underline double;
+}
+body .index .Fila .Hero {
+  opacity: 0;
+  grid-column: Uno/Cinco;
+  text-align: center;
+  background: linear-gradient(purple, rgb(75, 39, 160));
+  font-size: large;
+  animation: AnimacionEntrada 0.6s ease-out 1.2s forwards;
+}
+body .index .Fila .CTA {
+  opacity: 0;
+  grid-column: Uno/Cinco;
+  text-align: center;
+  background: Linear-gradient(purple, rgb(75, 39, 160));
+  margin-bottom: 5%;
+  animation: AnimacionEntrada 0.6s ease-out 1.8s forwards;
 }/*# sourceMappingURL=style.css.map */
