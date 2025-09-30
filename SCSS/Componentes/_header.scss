@@ -6,9 +6,9 @@
 body{
     padding: 0;
     margin: 0;
-    background: radial-gradient(circle, purple, rgb(75, 39, 160));
+    @extend .colorfondo;
     header{
-        background: linear-gradient(90deg, purple, rgb(75, 39, 160));
+        @extend .colorheader;
         box-sizing: border-box;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         display: grid;
@@ -32,7 +32,7 @@ body{
             }
         }
         nav{
-            background: linear-gradient(90deg, purple, rgb(60, 32, 126) );
+            @extend .colorheader;
             border-style: solid;
             border-width: 1px;
             border-color: black;

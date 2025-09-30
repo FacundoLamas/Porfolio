@@ -3,6 +3,15 @@
   letter-spacing: 2px;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 10px black;
+}
+
+.colorfondo, body .index .Fila .Presentacion, footer, body {
+  background: radial-gradient(closest-side, darkblue, darkslateblue);
+}
+
+.colorheader, body .index .Fila .Hero, body .index .Fila .CTA, body header, body header nav {
+  background: linear-gradient(180deg, darkblue, darkslateblue);
 }
 
 @keyframes AnimacionEntrada {
@@ -28,10 +37,8 @@
 body {
   padding: 0;
   margin: 0;
-  background: radial-gradient(circle, purple, rgb(75, 39, 160));
 }
 body header {
-  background: linear-gradient(90deg, purple, rgb(75, 39, 160));
   box-sizing: border-box;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: grid;
@@ -56,7 +63,6 @@ body header div p {
   font-size: 20px;
 }
 body header nav {
-  background: linear-gradient(90deg, purple, rgb(60, 32, 126));
   border-style: solid;
   border-width: 1px;
   border-color: black;
@@ -131,7 +137,6 @@ body header nav ul li .Pagina-Activa {
 }
 .aboutme section div p {
   font-size: 20px;
-  color: white;
   text-align: left;
   margin: 0;
   animation: AnimacionEntrada 1.2s ease-out 0s none;
@@ -183,7 +188,6 @@ body header nav ul li .Pagina-Activa {
 
 footer {
   display: flex;
-  background: linear-gradient(180deg, purple, rgb(75, 39, 160));
 }
 footer div p {
   color: white;
@@ -276,7 +280,6 @@ body .index .Fila .Presentacion {
   opacity: 0;
   grid-column: Dos/Cuatro;
   text-align: center;
-  background: radial-gradient(circle, purple, rgb(75, 39, 160));
   margin: 5%;
   font-size: larger;
   animation: AnimacionEntrada 0.6s ease-out 0s forwards;
@@ -310,7 +313,6 @@ body .index .Fila .Hero {
   opacity: 0;
   grid-column: Uno/Cinco;
   text-align: center;
-  background: linear-gradient(purple, rgb(75, 39, 160));
   font-size: large;
   animation: AnimacionEntrada 0.6s ease-out 1.2s forwards;
 }
@@ -318,7 +320,6 @@ body .index .Fila .CTA {
   opacity: 0;
   grid-column: Uno/Cinco;
   text-align: center;
-  background: Linear-gradient(purple, rgb(75, 39, 160));
   margin-bottom: 5%;
   animation: AnimacionEntrada 0.6s ease-out 1.8s forwards;
 }/*# sourceMappingURL=style.css.map */

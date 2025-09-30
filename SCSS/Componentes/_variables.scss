@@ -1,13 +1,19 @@
 // Variables
-$color-primario:rgb(96, 24, 162);
-$color-secundario: rgb(86,20,126);
-$color-terciario: rgb(122, 33, 205, 0.800);
 .texto{
     color: white;
     letter-spacing: 2px;
     text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 10px black;
 }
+
+.colorfondo{
+    background: radial-gradient(closest-side , darkblue  , darkslateblue );
+}
+.colorheader{
+    background: linear-gradient(180deg, darkblue  , darkslateblue);
+}
+
 @keyframes AnimacionEntrada {
             from {
                 opacity: 0;
