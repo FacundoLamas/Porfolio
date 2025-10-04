@@ -1,11 +1,17 @@
 @use "variables";
-footer{
-    display: flex;
-    @extend .colorfondo;
-    div{
-        p{
-            color: white;
+body{
+    footer{
+        display: flex;
+        @extend .colorheader;
+        position: absolute;
+        width: 100%;
+        div{
+            display: flex;
+            margin-left: 5%;
+            p{
+                color: white;
+            }
         }
+        
     }
-    
 }

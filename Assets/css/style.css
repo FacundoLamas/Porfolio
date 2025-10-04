@@ -1,4 +1,4 @@
-.texto, body .index .Fila .Presentacion, body .index .Fila .Botones button, body .index .Fila .Hero, body .index .Fila .CTA, .proyectos .Fila .columna p, .proyectos .Fila .columna div p a, .aboutme section div p {
+.texto, body .index .Fila .Presentacion, body .index .Fila .Botones button, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme section div p {
   color: white;
   letter-spacing: 2px;
   text-align: center;
@@ -6,12 +6,12 @@
   text-shadow: 1px 1px 10px black;
 }
 
-.colorfondo, body .index .Fila .Presentacion, footer, body {
-  background: radial-gradient(closest-side, darkblue, darkslateblue);
+.colorfondo, body .index .Fila .Presentacion, body {
+  background-color: rgb(130, 59, 174);
 }
 
-.colorheader, body .index .Fila .Hero, body .index .Fila .CTA, body header, body header nav {
-  background: linear-gradient(180deg, darkblue, darkslateblue);
+.colorheader, body .index .Fila .Hero, body .index .Fila .CTA, body footer, body header, body header nav {
+  background-color: rgb(96, 24, 162);
 }
 
 @keyframes AnimacionEntrada {
@@ -34,6 +34,27 @@
     transform: translateY(0);
   }
 }
+@keyframes imagenrotativa {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  5% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  33% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
 body {
   padding: 0;
   margin: 0;
@@ -46,7 +67,6 @@ body header {
   align-content: center;
   justify-items: center;
   grid-template-columns: 100%;
-  animation: Encabezado 0.8s ease-out 0s none;
 }
 body header div {
   width: 100%;
@@ -64,7 +84,8 @@ body header div p {
 }
 body header nav {
   border-style: solid;
-  border-width: 1px;
+  border-left: 0px;
+  border-right: 0px;
   border-color: black;
   width: 100%;
   height: 100%;
@@ -107,7 +128,6 @@ body header nav ul li .Pagina-Activa {
   box-sizing: border-box;
 }
 .aboutme section {
-  animation: AnimacionEntrada 0.8s ease-out 0s none;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
@@ -181,15 +201,21 @@ body header nav ul li .Pagina-Activa {
   align-items: center;
 }
 .Educacion .Fila .columna img {
-  max-width: 80%;
-  min-width: 80%;
+  max-width: 50%;
+  min-width: 50%;
   padding: 5%;
 }
 
-footer {
+body footer {
   display: flex;
+  position: absolute;
+  width: 100%;
 }
-footer div p {
+body footer div {
+  display: flex;
+  margin-left: 5%;
+}
+body footer div p {
   color: white;
 }
 
@@ -259,16 +285,19 @@ footer div p {
   position: absolute;
   font-size: x-small;
   width: 100%;
-  bottom: 0%;
+  bottom: 10%;
   height: 40%;
   text-align: center;
+  font-size: 95%;
 }
-.proyectos .Fila .columna div p a {
+.proyectos .Fila .columna div a {
   text-decoration: none;
   position: absolute;
-  top: 70%;
-  right: 45%;
-  font-size: large;
+  bottom: 0%;
+  height: 10%;
+  width: 100%;
+  font-size: 100%;
+  background-color: rgba(0, 0, 0, 0.775);
 }
 
 body .index .Fila {
@@ -309,6 +338,9 @@ body .index .Fila .Botones button {
   -webkit-text-decoration: underline double;
           text-decoration: underline double;
 }
+body .index .Fila .Botones a {
+  color: white;
+}
 body .index .Fila .Hero {
   opacity: 0;
   grid-column: Uno/Cinco;
@@ -322,4 +354,52 @@ body .index .Fila .CTA {
   text-align: center;
   margin-bottom: 5%;
   animation: AnimacionEntrada 0.6s ease-out 1.8s forwards;
+}
+body .Imagenes {
+  width: 100%;
+  max-width: 100%;
+  height: 60%;
+  display: grid;
+  grid-template-rows: [uno] 1fr [dos] 1fr;
+  margin-bottom: 5%;
+}
+@media (max-width: 768px) {
+  body .Imagenes {
+    height: 40%;
+  }
+}
+body .Imagenes h2 {
+  grid-row: uno/uno;
+}
+body .Imagenes .Imagenesrotativas {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: dos/dos;
+}
+body .Imagenes .Imagenesrotativas .Imagenrotativa {
+  position: absolute;
+  opacity: 0;
+  animation: imagenrotativa 15s infinite;
+}
+body .Imagenes .Imagenesrotativas .Imagenrotativa img {
+  max-width: 500px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  body .Imagenes .Imagenesrotativas .Imagenrotativa img {
+    max-width: 350px;
+  }
+}
+body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(1) {
+  animation-delay: 0s;
+}
+body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(2) {
+  animation-delay: 5s;
+}
+body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(3) {
+  animation-delay: 10s;
 }/*# sourceMappingURL=style.css.map */
