@@ -1,4 +1,4 @@
-.texto, body main div h2, body main div p, body .index .Fila .Presentacion, body .index .Fila .Botones button, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme section div p, .Educacion .Fila .columna p {
+.texto, body main section h2, body main section div h3, body main div h2, body main div p, body .index .Fila .Presentacion, body .index .Fila .Botones button, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme section div p, .Educacion .Fila .columna p {
   color: white;
   letter-spacing: 2px;
   text-align: center;
@@ -484,4 +484,26 @@ body main .Fila .Gmail img {
     grid-row: auto;
     margin-bottom: 5%;
   }
+}
+
+body main section div {
+  margin: 5%;
+  display: grid;
+  justify-items: center;
+  background: linear-gradient(180deg, rgb(107, 0, 139), darkslateblue);
+  border-radius: 300px;
+  padding: 5%;
+}
+@media (max-width: 768px) {
+  body main section div {
+    padding: 20%;
+  }
+}
+body main section div p {
+  text-align: start;
+}
+body main section div img {
+  max-width: 250px;
+  border-radius: 300px;
+  max-height: 200px;
 }/*# sourceMappingURL=style.css.map */
