@@ -6,6 +6,7 @@
     section{
         display: grid;
         grid-template-columns: 1fr 2fr ;
+        margin-bottom: 5%;
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
             }
@@ -36,6 +37,9 @@
                     text-align: center;
                 }
             }
+        }
+        .parrafosabout{
+            display: grid;
         }
         .fotomia{
                 align-items: center;
@@ -71,8 +75,13 @@
                 max-width: 50%;
                 min-width: 50%;
                 padding: 5%;
+                @media(max-width: 768px){
+                    max-width: 80%;
+                    min-width: 80%;
+                }
             }
             p{
+                font-size: 16px;
                 @extend .texto;
                 
             }

@@ -132,6 +132,7 @@ body header nav ul li .Pagina-Activa {
 .aboutme section {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  margin-bottom: 5%;
 }
 @media (max-width: 768px) {
   .aboutme section {
@@ -170,6 +171,9 @@ body header nav ul li .Pagina-Activa {
     text-align: center;
   }
 }
+.aboutme section .parrafosabout {
+  display: grid;
+}
 .aboutme section .fotomia {
   align-items: center;
   padding-left: 30px;
@@ -207,6 +211,16 @@ body header nav ul li .Pagina-Activa {
   min-width: 50%;
   padding: 5%;
 }
+@media (max-width: 768px) {
+  .Educacion .Fila .columna img {
+    max-width: 80%;
+    min-width: 80%;
+  }
+}
+.Educacion .Fila .columna p {
+  font-size: 16px;
+}
+
 body footer {
   display: flex;
   position: relative;
