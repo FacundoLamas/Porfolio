@@ -3,7 +3,7 @@ body{
     footer{
         display: flex;
         @extend .colorheader;
-        position: absolute;
+        position: relative;
         width: 100%;
         div{
             display: flex;

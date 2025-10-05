@@ -1,0 +1,90 @@
+@use "../Componentes/variables";
+body{
+
+    main{
+        div{
+            h2{
+                @extend .texto;
+            }
+            p{
+                @extend .texto;
+            }
+        }
+        .Fila{
+            display: grid;
+            grid-template-rows: [uno] 1fr [dos] 1fr;
+            grid-template-columns: repeat(2, 1fr) ;
+            justify-items: center;
+            align-items: center;
+            row-gap: 5%;
+            
+            .github{
+                grid-column: 1 ;
+                a{
+                    img{
+                        border-radius: 300px;
+                        width: 250px;
+                    }
+                }
+            }
+            .Linkedin{
+                grid-column: 2;
+                a{
+                    img{
+                        border-radius: 300px;
+                        width: 250px;
+                    }
+                }
+            }
+            .Whatsapp{
+                grid-row: dos/dos ;
+                grid-column: 1;
+                img{
+                    border-radius: 300px;
+                    width:250px ;
+                }
+                
+            }   
+            .Gmail{
+                grid-row: dos/dos;
+                
+                
+                img{
+                    border-radius: 300px;
+                    width:250px ;
+                }
+                
+            }
+            
+            
+            @media(max-width: 768px){
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                row-gap: 0;
+                .github {
+                    grid-column: 1;
+                    grid-row: auto;
+                    margin-bottom: 5%;
+                }
+                
+                .Linkedin {
+                    grid-column: 1;
+                    grid-row: auto;
+                    margin-bottom: 5%;
+                }
+                
+                .Whatsapp {
+                    grid-column: 1;
+                    grid-row: auto;
+                    margin-bottom: 5%;
+                }
+                
+                .Gmail {
+                    grid-column: 1;
+                    grid-row: auto;
+                    margin-bottom: 5%;
+                }
+            }
+        }
+    }
+}

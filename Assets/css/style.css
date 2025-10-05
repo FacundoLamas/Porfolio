@@ -1,4 +1,4 @@
-.texto, body .index .Fila .Presentacion, body .index .Fila .Botones button, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme section div p {
+.texto, body main div h2, body main div p, body .index .Fila .Presentacion, body .index .Fila .Botones button, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme section div p, .Educacion .Fila .columna p {
   color: white;
   letter-spacing: 2px;
   text-align: center;
@@ -42,6 +42,7 @@
   5% {
     opacity: 1;
     transform: scale(1);
+    z-index: 1000;
   }
   33% {
     opacity: 1;
@@ -49,6 +50,7 @@
   }
   40% {
     opacity: 0;
+    z-index: 0;
     transform: scale(1.1);
   }
   100% {
@@ -205,10 +207,9 @@ body header nav ul li .Pagina-Activa {
   min-width: 50%;
   padding: 5%;
 }
-
 body footer {
   display: flex;
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 body footer div {
@@ -329,17 +330,17 @@ body .index .Fila .Botones {
 @media (max-width: 768px) {
   body .index .Fila .Botones {
     grid-column: Uno/Cinco;
-    font-size: large;
   }
 }
 body .index .Fila .Botones button {
   background: none;
   border: none;
-  -webkit-text-decoration: underline double;
-          text-decoration: underline double;
+  margin: 5%;
 }
 body .index .Fila .Botones a {
+  font-size: 16px;
   color: white;
+  text-decoration: none;
 }
 body .index .Fila .Hero {
   opacity: 0;
@@ -347,6 +348,7 @@ body .index .Fila .Hero {
   text-align: center;
   font-size: large;
   animation: AnimacionEntrada 0.6s ease-out 1.2s forwards;
+  margin-bottom: 5%;
 }
 body .index .Fila .CTA {
   opacity: 0;
@@ -362,6 +364,7 @@ body .Imagenes {
   display: grid;
   grid-template-rows: [uno] 1fr [dos] 1fr;
   margin-bottom: 5%;
+  margin-top: 5%;
 }
 @media (max-width: 768px) {
   body .Imagenes {
@@ -402,4 +405,69 @@ body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(2) {
 }
 body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(3) {
   animation-delay: 10s;
+}
+
+body main .Fila {
+  display: grid;
+  grid-template-rows: [uno] 1fr [dos] 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  row-gap: 5%;
+}
+body main .Fila .github {
+  grid-column: 1;
+}
+body main .Fila .github a img {
+  border-radius: 300px;
+  width: 250px;
+}
+body main .Fila .Linkedin {
+  grid-column: 2;
+}
+body main .Fila .Linkedin a img {
+  border-radius: 300px;
+  width: 250px;
+}
+body main .Fila .Whatsapp {
+  grid-row: dos/dos;
+  grid-column: 1;
+}
+body main .Fila .Whatsapp img {
+  border-radius: 300px;
+  width: 250px;
+}
+body main .Fila .Gmail {
+  grid-row: dos/dos;
+}
+body main .Fila .Gmail img {
+  border-radius: 300px;
+  width: 250px;
+}
+@media (max-width: 768px) {
+  body main .Fila {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 0;
+  }
+  body main .Fila .github {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: 5%;
+  }
+  body main .Fila .Linkedin {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: 5%;
+  }
+  body main .Fila .Whatsapp {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: 5%;
+  }
+  body main .Fila .Gmail {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: 5%;
+  }
 }/*# sourceMappingURL=style.css.map */
