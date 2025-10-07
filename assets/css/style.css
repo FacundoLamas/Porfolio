@@ -1,4 +1,5 @@
-.texto, body main section h2, body main section div h3, body main div h2, body main div p, body .index .Fila .Presentacion, body .index .Fila .Botones button, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme section div p, .Educacion .Fila .columna p {
+@charset "UTF-8";
+.texto, body .Reseñas section h2, body .Reseñas section div h3, body main div h2, body main div p, body .index .Fila .Presentacion, body .index .Fila .Botones button, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme section div p, .Educacion .Fila .columna p {
   color: white;
   letter-spacing: 2px;
   text-align: center;
@@ -24,20 +25,20 @@
     transform: scale(1);
   }
 }
-@keyframes Encabezado {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/*@keyframes Encabezado {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }*/
 @keyframes imagenrotativa {
   0% {
     opacity: 0;
-    transform: scale(1.1);
+    transform: scale(0.5);
   }
   5% {
     opacity: 1;
@@ -51,7 +52,7 @@
   40% {
     opacity: 0;
     z-index: 0;
-    transform: scale(1.1);
+    transform: scale(0);
   }
   100% {
     opacity: 0;
@@ -486,7 +487,7 @@ body main .Fila .Gmail img {
   }
 }
 
-body main section div {
+body .Reseñas section div {
   margin: 5%;
   display: grid;
   justify-items: center;
@@ -495,14 +496,14 @@ body main section div {
   padding: 5%;
 }
 @media (max-width: 768px) {
-  body main section div {
+  body .Reseñas section div {
     padding: 20%;
   }
 }
-body main section div p {
+body .Reseñas section div p {
   text-align: start;
 }
-body main section div img {
+body .Reseñas section div img {
   max-width: 250px;
   border-radius: 300px;
   max-height: 200px;
