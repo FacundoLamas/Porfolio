@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.texto, body .Reseñas section h2, body .Reseñas section div h3, body main div h2, body main div p, body .index .Fila .Presentacion, body .index .Fila .Botones button, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme section div p, .Educacion .Fila .columna p {
+.texto, .Reseñas section h2, .Reseñas section div h3, .Contactame div h2, .Contactame div p, body .index .Fila .Presentacion, body .index .Fila .Botones div, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme section div p, .Educacion .Fila .columna p {
   color: white;
   letter-spacing: 2px;
   text-align: center;
@@ -11,7 +11,7 @@
   background-color: rgb(130, 59, 174);
 }
 
-.colorheader, body .index .Fila .Hero, body .index .Fila .CTA, body footer, body header, body header nav {
+.colorheader, body .index .Fila .Hero, body .index .Fila .CTA, footer, body header div, body header nav {
   background-color: rgb(96, 24, 162);
 }
 
@@ -25,16 +25,16 @@
     transform: scale(1);
   }
 }
-/*@keyframes Encabezado {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }*/
+@keyframes navegador {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
 @keyframes imagenrotativa {
   0% {
     opacity: 0;
@@ -61,8 +61,11 @@
 body {
   padding: 0;
   margin: 0;
+  height: 100%;
+  width: 100%;
 }
 body header {
+  width: 100%;
   box-sizing: border-box;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: grid;
@@ -105,6 +108,11 @@ body header nav ul {
     margin: 0;
   }
 }
+@media (max-width: 768px) {
+  body header nav ul {
+    flex-direction: column;
+  }
+}
 body header nav ul li {
   list-style: none;
   padding: 10px;
@@ -123,6 +131,51 @@ body header nav ul li a {
 }
 body header nav ul li .Pagina-Activa {
   color: white;
+}
+body header .navHamburgesa {
+  height: auto;
+}
+@media (min-width: 760px) {
+  body header .navHamburgesa {
+    display: none;
+  }
+}
+body header .navHamburgesa input {
+  position: absolute;
+  top: -1000;
+  opacity: 0;
+}
+body header .navHamburgesa label img {
+  width: 100px;
+  max-width: 20%;
+}
+body header .navHamburgesa label ul {
+  border-style: solid;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-color: black;
+  height: 0;
+  display: none;
+}
+body header .navHamburgesa input:checked + label ul {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  animation: navegador 2s forwards;
+  display: flex;
+}
+body header .navHamburgesa input:checked + label ul li {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  animation: navegador 2s;
+}
+@media (max-width: 760px) {
+  body header .navNormal {
+    display: none;
+  }
+}
+body header .navHamburgesa:has(input:checked) {
+  animation: navegador 0.5s forwards;
 }
 
 .aboutme {
@@ -188,6 +241,7 @@ body header nav ul li .Pagina-Activa {
   grid-template-rows: 15% 85%;
   grid-template-columns: 100%;
   animation: AnimacionEntrada 0.8s ease-out 0s none;
+  padding-bottom: 5%;
 }
 .Educacion .educaciontxt {
   display: flex;
@@ -222,35 +276,40 @@ body header nav ul li .Pagina-Activa {
   font-size: 16px;
 }
 
-body footer {
+footer {
   display: flex;
   position: relative;
   width: 100%;
 }
-body footer div {
+footer div {
   display: flex;
   margin-left: 5%;
 }
-body footer div p {
+footer div p {
   color: white;
 }
 
 .proyectos {
-  margin-bottom: 10%;
+  margin-top: 10%;
+  padding-bottom: 30%;
+  margin-bottom: 30%;
+  height: auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .proyectos {
     width: 100%;
+    padding-bottom: 50%;
+    margin-bottom: 50%;
   }
 }
 .proyectos .Fila {
   display: grid;
   grid-template-rows: 50% 50%;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .proyectos .Fila {
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     grid-template-columns: 1fr;
   }
 }
@@ -282,12 +341,25 @@ body footer div p {
   justify-items: center;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .proyectos .Fila .columna p {
+    font-size: 24px;
+  }
+}
 .proyectos .Fila .columna div {
-  display: flex;
-  justify-content: center;
   position: relative;
   border: solid, black, 5px;
-  width: 90%;
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60% 30% 10%;
+  row-gap: 2rem;
+}
+@media (min-width: 560px) {
+  .proyectos .Fila .columna div {
+    min-height: 70%;
+    max-height: 70%;
+  }
 }
 .proyectos .Fila .columna div img {
   width: 100%;
@@ -302,9 +374,9 @@ body footer div p {
   font-size: x-small;
   width: 100%;
   bottom: 10%;
-  height: 40%;
+  height: 30%;
   text-align: center;
-  font-size: 95%;
+  font-size: 80%;
 }
 .proyectos .Fila .columna div a {
   text-decoration: none;
@@ -338,19 +410,27 @@ body .index .Fila .Botones {
   opacity: 0;
   display: flex;
   justify-content: space-between;
-  grid-column: Dos/Cuatro;
+  grid-column: Uno/Cuatro;
   margin: 5%;
   animation: AnimacionEntrada 0.6s ease-out 0.6s forwards;
 }
 @media (max-width: 768px) {
   body .index .Fila .Botones {
-    grid-column: Uno/Cinco;
+    grid-column: Uno/Tres;
   }
 }
-body .index .Fila .Botones button {
+@media (max-width: 560px) {
+  body .index .Fila .Botones {
+    flex-direction: column;
+    grid-column: Dos/Cuatro;
+  }
+}
+body .index .Fila .Botones div {
+  display: flex;
+  justify-content: center;
   background: none;
   border: none;
-  margin: 5%;
+  margin: 5% 20%;
 }
 body .index .Fila .Botones a {
   font-size: 16px;
@@ -364,13 +444,14 @@ body .index .Fila .Hero {
   font-size: large;
   animation: AnimacionEntrada 0.6s ease-out 1.2s forwards;
   margin-bottom: 5%;
+  padding: 5%;
 }
 body .index .Fila .CTA {
   opacity: 0;
   grid-column: Uno/Cinco;
   text-align: center;
-  margin-bottom: 5%;
   animation: AnimacionEntrada 0.6s ease-out 1.8s forwards;
+  padding: 5%;
 }
 body .Imagenes {
   width: 100%;
@@ -379,7 +460,7 @@ body .Imagenes {
   display: grid;
   grid-template-rows: [uno] 1fr [dos] 1fr;
   margin-bottom: 5%;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 @media (max-width: 768px) {
   body .Imagenes {
@@ -412,6 +493,11 @@ body .Imagenes .Imagenesrotativas .Imagenrotativa img {
     max-width: 350px;
   }
 }
+@media (max-width: 560px) {
+  body .Imagenes .Imagenesrotativas .Imagenrotativa img {
+    max-width: 200px;
+  }
+}
 body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(1) {
   animation-delay: 0s;
 }
@@ -422,7 +508,10 @@ body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(3) {
   animation-delay: 10s;
 }
 
-body main .Fila {
+.Contactame {
+  animation: AnimacionEntrada 0.6s linear 0s forwards;
+}
+.Contactame .Fila {
   display: grid;
   grid-template-rows: [uno] 1fr [dos] 1fr;
   grid-template-columns: repeat(2, 1fr);
@@ -430,80 +519,97 @@ body main .Fila {
   align-items: center;
   row-gap: 5%;
 }
-body main .Fila .github {
+.Contactame .Fila .github {
   grid-column: 1;
+  animation: AnimacionEntrada 0.6s linear 0s forwards;
 }
-body main .Fila .github a img {
+.Contactame .Fila .github a img {
   border-radius: 300px;
   width: 250px;
 }
-body main .Fila .Linkedin {
+.Contactame .Fila .Linkedin {
+  animation: AnimacionEntrada 0.6s linear 0s forwards;
   grid-column: 2;
 }
-body main .Fila .Linkedin a img {
+.Contactame .Fila .Linkedin a img {
   border-radius: 300px;
   width: 250px;
 }
-body main .Fila .Whatsapp {
+.Contactame .Fila .Whatsapp {
+  animation: AnimacionEntrada 0.6s linear 0s forwards;
   grid-row: dos/dos;
   grid-column: 1;
 }
-body main .Fila .Whatsapp img {
+.Contactame .Fila .Whatsapp img {
   border-radius: 300px;
   width: 250px;
 }
-body main .Fila .Gmail {
+.Contactame .Fila .Gmail {
   grid-row: dos/dos;
+  animation: AnimacionEntrada 0.6s linear 0s forwards;
 }
-body main .Fila .Gmail img {
+.Contactame .Fila .Gmail img {
   border-radius: 300px;
   width: 250px;
 }
 @media (max-width: 768px) {
-  body main .Fila {
+  .Contactame .Fila {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     row-gap: 0;
   }
-  body main .Fila .github {
+  .Contactame .Fila .github {
+    animation: AnimacionEntrada 0.6s linear 0s forwards;
     grid-column: 1;
     grid-row: auto;
     margin-bottom: 5%;
   }
-  body main .Fila .Linkedin {
+  .Contactame .Fila .Linkedin {
+    animation: AnimacionEntrada 0.6s linear 0s forwards;
     grid-column: 1;
     grid-row: auto;
     margin-bottom: 5%;
   }
-  body main .Fila .Whatsapp {
+  .Contactame .Fila .Whatsapp {
+    animation: AnimacionEntrada 0.6s linear 0s forwards;
     grid-column: 1;
     grid-row: auto;
     margin-bottom: 5%;
   }
-  body main .Fila .Gmail {
+  .Contactame .Fila .Gmail {
+    animation: AnimacionEntrada 0.6s linear 0s forwards;
     grid-column: 1;
     grid-row: auto;
     margin-bottom: 5%;
   }
 }
 
-body .Reseñas section div {
+.Reseñas section {
+  animation: AnimacionEntrada 0.6s linear 0s forwards;
+}
+.Reseñas section div {
   margin: 5%;
   display: grid;
   justify-items: center;
+  justify-content: center;
   background: linear-gradient(180deg, rgb(107, 0, 139), darkslateblue);
   border-radius: 300px;
-  padding: 5%;
+  padding: 5% 10%;
 }
-@media (max-width: 768px) {
-  body .Reseñas section div {
-    padding: 20%;
+@media (max-width: 560px) {
+  .Reseñas section div {
+    border-radius: 0;
   }
 }
-body .Reseñas section div p {
+@media (max-width: 768px) {
+  .Reseñas section div {
+    padding: 10% 20%;
+  }
+}
+.Reseñas section div p {
   text-align: start;
 }
-body .Reseñas section div img {
+.Reseñas section div img {
   max-width: 250px;
   border-radius: 300px;
   max-height: 200px;

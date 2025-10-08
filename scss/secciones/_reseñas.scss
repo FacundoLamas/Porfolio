@@ -1,32 +1,38 @@
 @use "../componentes/variables";
 
-body{
-    .Reseñas{
-        section{
-            h2{
-                @extend .texto;
+
+.Reseñas{
+    
+    section{
+        animation: AnimacionEntrada 0.6s linear 0s forwards;
+        h2{
+            @extend .texto;
+        }
+        div{
+            margin: 5%;
+            display: grid;
+            justify-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, rgb(107, 0, 139)  , darkslateblue);
+            border-radius: 300px;
+            padding: 5% 10%;
+            @media(max-width:560px){
+                border-radius: 0;
             }
-            div{
-                margin: 5%;
-                display: grid;
-                justify-items: center;
-                background: linear-gradient(180deg, rgb(107, 0, 139)  , darkslateblue);
+            @media(max-width:768px){
+                padding: 10% 20%;
+                
+            }
+            h3{
+                @extend .texto;
+                
+            }
+            p{
+                text-align: start;
+            }img{
+                max-width: 250px;
                 border-radius: 300px;
-                padding: 5%;
-                @media(max-width:768px){
-                    padding: 20%;
-                }
-                h3{
-                    @extend .texto;
-                    
-                }
-                p{
-                    text-align: start;
-                }img{
-                    max-width: 250px;
-                    border-radius: 300px;
-                    max-height: 200px;
-                }
+                max-height: 200px;
             }
         }
     }

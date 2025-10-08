@@ -6,21 +6,35 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <!-- Titulo -->
         <div>
             <h1>Facundo Lamas</h1>
             <p>Licenciado en informatica</p>
         </div>
-        <!-- Navegacion -->
-        <nav>
+        <!-- Navegacion > 768px -->
+        <nav class="navNormal">
             <ul>
                 <li><a href="../index.html">Principal</a></li>
                 <li><a href="./aboutcss.html" class="Pagina-Activa">About Me</a></li>
                 <li><a href="./contactocss.html">Contacto</a></li>
-                <li><a href="./proyectoscss.html">Proyecto</a></li>
+                <li><a href="./proyectoscss.html" >Proyecto</a></li>
                 <li><a href="./reseñascss.html">Reseñas</a></li>
             </ul>
+        </nav>
+        <!-- Navegador < 768px -->
+        <nav class="navHamburgesa">
+            <input type="checkbox" name="Check" id="Check" >
+            <label for="Check">
+                <img src="../assets/img/Hamburgesa.png" alt="">
+                <ul>
+                    <li><a href="../index.html">Principal</a></li>
+                    <li><a href="./aboutcss.html"class="Pagina-Activa">About Me</a></li>
+                    <li><a href="./contactocss.html">Contacto</a></li>
+                    <li><a href="./proyectoscss.html" >Proyecto</a></li>
+                    <li><a href="./reseñascss.html">Reseñas</a></li>
+                </ul>
+            </label>
         </nav>
     </header>
     <!-- Principal -->

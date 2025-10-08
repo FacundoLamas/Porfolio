@@ -1,90 +1,98 @@
 @use "../componentes/variables";
-body{
 
-    main{
-        div{
-            h2{
-                @extend .texto;
-            }
-            p{
-                @extend .texto;
+.Contactame{
+    animation: AnimacionEntrada 0.6s linear 0s forwards;
+    div{
+        h2{
+            @extend .texto;
+        }
+        p{
+            @extend .texto;
+        }
+    }
+    .Fila{
+        display: grid;
+        grid-template-rows: [uno] 1fr [dos] 1fr;
+        grid-template-columns: repeat(2, 1fr) ;
+        justify-items: center;
+        align-items: center;
+        row-gap: 5%;
+        
+        .github{
+            grid-column: 1 ;
+            animation: AnimacionEntrada 0.6s linear 0s forwards;
+            a{
+                img{
+                    border-radius: 300px;
+                    width: 250px;
+                }
             }
         }
-        .Fila{
-            display: grid;
-            grid-template-rows: [uno] 1fr [dos] 1fr;
-            grid-template-columns: repeat(2, 1fr) ;
-            justify-items: center;
-            align-items: center;
-            row-gap: 5%;
+        .Linkedin{
+            animation: AnimacionEntrada 0.6s linear 0s forwards;
+            grid-column: 2;
+            a{
+                img{
+                    
+                    border-radius: 300px;
+                    width: 250px;
+                }
+            }
+        }
+        .Whatsapp{
+            animation: AnimacionEntrada 0.6s linear 0s forwards;
+            grid-row: dos/dos ;
+            grid-column: 1;
+            img{
+                border-radius: 300px;
+                width:250px ;
+            }
             
-            .github{
-                grid-column: 1 ;
-                a{
-                    img{
-                        border-radius: 300px;
-                        width: 250px;
-                    }
-                }
+        }   
+        .Gmail{
+            grid-row: dos/dos;
+            animation: AnimacionEntrada 0.6s linear 0s forwards;
+            
+            
+            img{
+                border-radius: 300px;
+                width:250px ;
             }
-            .Linkedin{
-                grid-column: 2;
-                a{
-                    img{
-                        border-radius: 300px;
-                        width: 250px;
-                    }
-                }
-            }
-            .Whatsapp{
-                grid-row: dos/dos ;
+        }
+        
+        
+        @media(max-width: 768px){
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            row-gap: 0;
+            .github {
+                animation: AnimacionEntrada 0.6s linear 0s forwards;
                 grid-column: 1;
-                img{
-                    border-radius: 300px;
-                    width:250px ;
-                }
-                
-            }   
-            .Gmail{
-                grid-row: dos/dos;
-                
-                
-                img{
-                    border-radius: 300px;
-                    width:250px ;
-                }
-                
+                grid-row: auto;
+                margin-bottom: 5%;
             }
             
+            .Linkedin {
+                animation: AnimacionEntrada 0.6s linear 0s forwards;
+                grid-column: 1;
+                grid-row: auto;
+                margin-bottom: 5%;
+            }
             
-            @media(max-width: 768px){
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-                row-gap: 0;
-                .github {
-                    grid-column: 1;
-                    grid-row: auto;
-                    margin-bottom: 5%;
-                }
-                
-                .Linkedin {
-                    grid-column: 1;
-                    grid-row: auto;
-                    margin-bottom: 5%;
-                }
-                
-                .Whatsapp {
-                    grid-column: 1;
-                    grid-row: auto;
-                    margin-bottom: 5%;
-                }
-                
-                .Gmail {
-                    grid-column: 1;
-                    grid-row: auto;
-                    margin-bottom: 5%;
-                }
+            .Whatsapp {
+                animation: AnimacionEntrada 0.6s linear 0s forwards;
+                grid-column: 1;
+                grid-row: auto;
+                margin-bottom: 5%;
+            }
+            
+            .Gmail {
+                animation: AnimacionEntrada 0.6s linear 0s forwards;
+                grid-column: 1;
+                grid-row: auto;
+                margin-bottom: 5%;
             }
         }
     }
 }
+

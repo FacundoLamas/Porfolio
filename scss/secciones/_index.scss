@@ -24,17 +24,24 @@ body{
                 opacity: 0;
                 display: flex;
                 justify-content: space-between;
-                grid-column: Dos/Cuatro;
+                
+                grid-column: Uno/Cuatro;
                 margin: 5%;
                 animation: AnimacionEntrada 0.6s ease-out 0.6s forwards;
                 @media (max-width:768px){
-                    grid-column: Uno/Cinco;
+                    grid-column: Uno/Tres;
                 }
-                button{
+                @media (max-width:560px){
+                    flex-direction: column;
+                    grid-column: Dos/Cuatro;
+                }
+                div{
+                    display: flex;
+                    justify-content: center;
                     background: none;
                     border: none;
                     @extend .texto;
-                    margin: 5%;
+                    margin: 5% 20%;
                 }
                 a{
                     font-size: 16px;
@@ -44,22 +51,24 @@ body{
             }
             .Hero{
                 opacity: 0;
-                grid-column: Uno/Cinco ;
+                grid-column: Uno/Cinco;
                 text-align: center;
                 @extend .colorheader;
                 font-size: large;
                 animation: AnimacionEntrada 0.6s ease-out 1.2s forwards;
                 @extend .texto;
                 margin-bottom: 5%;
+                padding: 5%;
             }
             .CTA{
                 opacity: 0;
-                grid-column: Uno/Cinco ;
+                grid-column: Uno/Cinco;
                 text-align: center;
                 @extend .colorheader;
                 @extend .texto;
-                margin-bottom: 5%;
                 animation: AnimacionEntrada 0.6s ease-out 1.8s forwards ;
+                padding: 5%;
+                //max-width: 80%;
             }
         }
     }
@@ -70,7 +79,7 @@ body{
         display: grid;
         grid-template-rows:[uno] 1fr [dos] 1fr;
         margin-bottom: 5%;
-        margin-top: 5%;
+        margin-top: 10%;
         @media (max-width:768px){
             height: 40%;
         }
@@ -87,6 +96,7 @@ body{
             justify-content: center;
             align-items: center;
             grid-row: dos/dos;
+            
             .Imagenrotativa {
                 position: absolute;
                 opacity: 0;
@@ -97,6 +107,9 @@ body{
                     width: 100%;
                     @media (max-width:768px){
                         max-width: 350px;
+                    }
+                    @media (max-width:560px){
+                        max-width: 200px;
                     }
                 }
                 

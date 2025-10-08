@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="./assets/css/style.css"><title>Principal</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <!-- Titulo -->
         <div>
             <h1>Facundo Lamas</h1>
             <p>Licenciado en informatica</p>
         </div>
-        <!-- Navegacion -->
-        <nav>
+        <!-- Navegacion > 768px -->
+        <nav class="navNormal">
             <ul>
                 <li><a href="./index.html" class="Pagina-Activa">Principal</a></li>
                 <li><a href="./pages/aboutcss.html">About Me</a></li>
@@ -22,16 +22,25 @@
                 <li><a href="./pages/reseñascss.html">Reseñas</a></li>
             </ul>
         </nav>
+        <!-- Navegador < 768px -->
+        <nav class="navHamburgesa">
+            <input type="checkbox" name="Check" id="Check" >
+            <label for="Check">
+                <img src="../assets/img/Hamburgesa.png" alt="">
+                <ul>
+                    <li><a href="./index.html" class="Pagina-Activa">Principal</a></li>
+                    <li><a href="./pages/aboutcss.html">About Me</a></li>
+                    <li><a href="./pages/contactocss.html">Contacto</a></li>
+                    <li><a href="./pages/proyectoscss.html" >Proyecto</a></li>
+                    <li><a href="./pages/reseñascss.html">Reseñas</a></li>
+                </ul>
+            </label>
+        </nav>
     </header>
     <!-- Zona principal con una presentacion sencilla, y links para conseguir mas informacion sobre mi -->
     <main class="index">
         <section class="Fila">
             <div class="Presentacion"><h2>Hola, soy Facundo, Desarrollador Frontend</h2></div>
-            <div class="Botones">
-                <button><a href="">Descargar CV</a></button> 
-                <button><a href="./pages/aboutcss.html">Conoceme</a></button>
-                <button><a href="./pages/proyectoscss.html">Mira mi trabajo</a></button>
-            </div>
             <!-- Un subtexto llamativo -->
             <div class="Hero">
                 <h3>Intento hacer magia programando</h3>
@@ -39,6 +48,11 @@
             <!-- Una invitacion para que vean mi trabajo -->
             <div class="CTA">
                 <h4>Te invito a ver el resto de secciones de la pagina para ver mi trabajo</h4>
+            </div>
+            <div class="Botones">
+                <div><a href="">Descargar CV</a></div> 
+                <div><a href="./pages/aboutcss.html">Conoceme</a></div>
+                <div><a href="./pages/proyectoscss.html">Mira mi trabajo</a></div>
             </div>
         </section>
     </main>

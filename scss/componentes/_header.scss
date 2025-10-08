@@ -6,9 +6,12 @@
 body{
     padding: 0;
     margin: 0;
+    height: 100%;
+    width: 100%;
     @extend .colorfondo;
     header{
-        @extend .colorheader;
+        width: 100%;
+        //@extend .colorheader;
         box-sizing: border-box;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         display: grid;
@@ -16,8 +19,8 @@ body{
         align-content: center;
         justify-items: center;
         grid-template-columns: 100%;
-        //animation: Encabezado 0.8s ease-out 0s none;
         div{
+            @extend .colorheader;
             width: 100%;
             text-align: center;
             color: whitesmoke;
@@ -39,8 +42,8 @@ body{
             border-color: black;
             width: 100%;
             height: 100%;
-            
             ul{
+                
                 margin-left: 2%;
                 padding: 0;
                 justify-content: flex-start;
@@ -48,6 +51,9 @@ body{
                 flex-direction: row;
                 @media (max-width: 768px){
                     margin:0;
+                }
+                @media (max-width:768px){
+                    flex-direction: column;
                 }
                 li{
                     list-style: none;
@@ -66,10 +72,58 @@ body{
                         color: white;
                     }
                     
-
                 }
             }
-
         }
+        .navHamburgesa{
+            height: auto;
+            @media(min-width:760px){
+                display: none;
+            }
+            input{
+                position: absolute;
+                top: -1000;
+                opacity: 0;
+            }
+            label{
+                img{
+                    width: 100px;
+                    max-width: 20%;
+                }
+                ul{
+                    border-style: solid;
+                    border-left: 0px;
+                    border-right: 0px;
+                    border-bottom: 0px;
+                    border-color: black;
+                    height: 0;
+                    display: none;
+                }
+            }
+            
+            input:checked + label{
+                
+                ul{
+                    max-height: fit-content;
+                    animation: navegador 2s forwards;
+                    display: flex ;
+                    
+                    li{
+                        max-height: fit-content;
+                        animation: navegador 2s ;
+                    }
+                }
+                
+            }
+            
+        }
+        .navNormal{
+            @media(max-width:760px){
+                display: none;
+            }
+        }
+        .navHamburgesa:has(input:checked){
+                animation: navegador 0.5s forwards;
+            }
     }
 }

@@ -1,16 +1,22 @@
 @use "../componentes/variables";
 .proyectos{
-    margin-bottom: 10%;
-    @media (max-width: 768px){
+    margin-top: 10%;
+    //Hice este padding y margin tremendo por que no me detecta el tamaño de el grid correcto
+    padding-bottom: 30%;
+    margin-bottom:30%;
+        height: auto;
+    @media (max-width: 1023px){
         width: 100%;
+        padding-bottom: 50%;
+        margin-bottom: 50%;
     }
     .Fila{
         display: grid;
         grid-template-rows: 50% 50%;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
         
-        @media (max-width: 768px){
-            grid-template-rows: 1fr;
+        @media (max-width: 1024px){
+            grid-template-rows: auto;
             grid-template-columns: 1fr;
         }
         // Animaciones
@@ -42,14 +48,23 @@
             justify-items: center;
             align-items: center;
             p{
-                @extend .texto
+                @extend .texto;
+                @media (min-width: 768px){
+                    font-size: 24px;
+                }
             }
             div{
-                display: flex;
-                justify-content: center;
                 position: relative;
                 border: solid,black,5px;
-                width: 90%;
+                width: 70%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 60% 30% 10%;
+                row-gap: 2rem;
+                @media(min-width: 560px){
+                    min-height: 70%;
+                    max-height: 70%;
+                }
                 img{
                     width: 100%;
                     display: block;
@@ -63,9 +78,9 @@
                     font-size: x-small;
                     width: 100%;
                     bottom: 10%;
-                    height: 40%;
+                    height: 30%;
                     text-align: center;
-                    font-size: 95%;
+                    font-size: 80%;
                     
                 }
                 a{
@@ -79,7 +94,6 @@
                     background-color: rgba(0, 0, 0, 0.775);
                     
                 }
-                
             }
         }
     }
