@@ -68,10 +68,11 @@ body header {
   width: 100%;
   box-sizing: border-box;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  display: grid;
   justify-content: center;
   align-content: center;
   justify-items: center;
+  display: grid;
+  grid-template-rows: auto;
   grid-template-columns: 100%;
 }
 body header div {
@@ -185,6 +186,7 @@ body header .navHamburgesa:has(input:checked) {
 }
 .aboutme section {
   display: grid;
+  grid-template-rows: 1fr;
   grid-template-columns: 1fr 2fr;
   margin-bottom: 5%;
 }
@@ -237,11 +239,11 @@ body header .navHamburgesa:has(input:checked) {
 }
 
 .Educacion {
+  animation: AnimacionEntrada 0.8s ease-out 0s none;
+  padding: 10%;
   display: grid;
   grid-template-rows: 15% 85%;
   grid-template-columns: 100%;
-  animation: AnimacionEntrada 0.8s ease-out 0s none;
-  padding-bottom: 5%;
 }
 .Educacion .educaciontxt {
   display: flex;
@@ -252,6 +254,7 @@ body header .navHamburgesa:has(input:checked) {
 }
 .Educacion .Fila {
   display: grid;
+  grid-template-rows: auto;
   grid-template-columns: 2fr 2fr;
   -moz-column-gap: 10%;
        column-gap: 10%;
@@ -309,6 +312,7 @@ footer div p {
 }
 @media (max-width: 1024px) {
   .proyectos .Fila {
+    display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr;
   }
@@ -351,8 +355,8 @@ footer div p {
   border: solid, black, 5px;
   width: 70%;
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: 60% 30% 10%;
+  grid-template-columns: 1fr;
   row-gap: 2rem;
 }
 @media (min-width: 560px) {
@@ -364,6 +368,7 @@ footer div p {
 .proyectos .Fila .columna div img {
   width: 100%;
   display: block;
+  height: 100%;
 }
 .proyectos .Fila .columna div p {
   display: block;
@@ -416,14 +421,8 @@ body .index .Fila .Botones {
   opacity: 0;
   display: flex;
   justify-content: space-between;
-  grid-column: Uno/Cuatro;
-  margin: 5%;
+  grid-column: Uno/Cinco;
   animation: AnimacionEntrada 0.6s ease-out 0.6s forwards;
-}
-@media (max-width: 768px) {
-  body .index .Fila .Botones {
-    grid-column: Uno/Tres;
-  }
 }
 @media (max-width: 560px) {
   body .index .Fila .Botones {
@@ -436,10 +435,10 @@ body .index .Fila .Botones div {
   justify-content: center;
   background: none;
   border: none;
-  margin: 5% 20%;
+  margin: 5% 5%;
 }
 body .index .Fila .Botones a {
-  font-size: 16px;
+  font-size: 30px;
   color: white;
   text-decoration: none;
 }
@@ -466,6 +465,7 @@ body .Imagenes {
   height: 60%;
   display: grid;
   grid-template-rows: [uno] 1fr [dos] 1fr;
+  grid-template-columns: auto;
   margin-bottom: 5%;
   margin-top: 10%;
 }
@@ -503,6 +503,7 @@ body .Imagenes .Imagenesrotativas .Imagenrotativa img {
 @media (max-width: 560px) {
   body .Imagenes .Imagenesrotativas .Imagenrotativa img {
     max-width: 200px;
+    min-height: 150px;
   }
 }
 body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(1) {
@@ -561,8 +562,9 @@ body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(3) {
 }
 @media (max-width: 768px) {
   .Contactame .Fila {
-    grid-template-columns: 1fr;
+    display: grid;
     grid-template-rows: auto;
+    grid-template-columns: 1fr;
     row-gap: 0;
   }
   .Contactame .Fila .github {

@@ -1,11 +1,13 @@
 @use "../componentes/variables";
+@use "../componentes/mixins";
 .aboutme{
     padding:0;
     margin: 0;
     box-sizing: border-box;
     section{
-        display: grid;
-        grid-template-columns: 1fr 2fr ;
+        //display: grid;
+        //grid-template-columns: 1fr 2fr ;
+        @include mixins.grids(grid,(1fr),(1fr 2fr));
         margin-bottom: 5%;
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
@@ -52,11 +54,12 @@
     }
 }
 .Educacion{
-    display: grid;
-    grid-template-rows: 15% 85%;
-    grid-template-columns: 100%;
+    // display: grid;
+    // grid-template-rows: 15% 85%;
+    // grid-template-columns: 100%;
     animation: AnimacionEntrada 0.8s ease-out 0s none;
-    padding-bottom: 5%;
+    padding: 10%;
+    @include mixins.grids(grid,(15% 85%),100%);
     .educaciontxt{
         display: flex;
         justify-content: center;
@@ -65,8 +68,9 @@
         padding-bottom: 5%;
     }
     .Fila{
-        display: grid;
-        grid-template-columns: 2fr  2fr;
+        //display: grid;
+        //grid-template-columns: 2fr  2fr;
+        @include mixins.grids(grid,auto,(2fr 2fr));
         column-gap: 10%;
         .columna{
             display: flex;

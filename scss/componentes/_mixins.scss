@@ -1,0 +1,5 @@
+@mixin grids($display,$gridrow,$gridcolumn){
+    display: $display;
+    grid-template-rows: $gridrow;
+    grid-template-columns: $gridcolumn;
+}

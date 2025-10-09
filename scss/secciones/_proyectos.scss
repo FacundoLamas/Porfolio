@@ -1,4 +1,5 @@
 @use "../componentes/variables";
+@use "../componentes/mixins";
 .proyectos{
     margin-top: 10%;
     //Hice este padding y margin tremendo por que no me detecta el tamaño de el grid correcto
@@ -11,13 +12,14 @@
         margin-bottom: 50%;
     }
     .Fila{
-        display: grid;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 1fr 1fr ;
-        
+        // display: grid;
+        // grid-template-rows: 50% 50%;
+        // grid-template-columns: 1fr 1fr ;
+        @include mixins.grids(grid,(50% 50%), (1fr 1fr));
         @media (max-width: 1024px){
-            grid-template-rows: auto;
-            grid-template-columns: 1fr;
+            // grid-template-rows: auto;
+            // grid-template-columns: 1fr;
+            @include mixins.grids(grid,(auto), (1fr));
         }
         // Animaciones
         #Proyecto1{
@@ -57,9 +59,10 @@
                 position: relative;
                 border: solid,black,5px;
                 width: 70%;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 60% 30% 10%;
+                // display: grid;
+                // grid-template-columns: 1fr;
+                // grid-template-rows: 60% 30% 10%;
+                @include mixins.grids(grid,(60% 30% 10%), (1fr));
                 row-gap: 2rem;
                 @media(min-width: 560px){
                     min-height: 70%;
@@ -68,6 +71,7 @@
                 img{
                     width: 100%;
                     display: block;
+                    height:100%;
                 }
                 p{
                     display: block;
