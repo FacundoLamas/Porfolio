@@ -11,9 +11,6 @@
         }
     }
     .Fila{
-        // display: grid;
-        // grid-template-rows: [uno] 1fr [dos] 1fr;
-        // grid-template-columns: repeat(2, 1fr) ;
         @include mixins.grids(grid,([uno] 1fr [dos] 1fr), repeat(2, 1fr) );
         justify-items: center;
         align-items: center;
@@ -63,8 +60,6 @@
         
         
         @media(max-width: 768px){
-            // grid-template-columns: 1fr;
-            // grid-template-rows: auto;
             @include mixins.grids(grid,auto,1fr);
             row-gap: 0;
             .github {

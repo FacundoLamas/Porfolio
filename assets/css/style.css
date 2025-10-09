@@ -418,6 +418,7 @@ body .index .Fila .Presentacion {
   }
 }
 body .index .Fila .Botones {
+  margin-top: 5%;
   opacity: 0;
   display: flex;
   justify-content: space-between;
@@ -459,7 +460,6 @@ body .index .Fila .CTA {
   padding: 5%;
 }
 body .Imagenes {
-  border-top: solid black 4px;
   width: 100%;
   max-width: 100%;
   height: 60%;
