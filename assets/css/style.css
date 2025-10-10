@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.texto, .Reseñas section h2, .Reseñas section div h3, .Contactame div h2, .Contactame div p, body .index .Fila .Presentacion, body .index .Fila .Botones div, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme section div p, .Educacion .Fila .columna p {
+.texto, .Reseñas section h2, .Reseñas section div h3, .Reseñas section div p, .Contactame div h2, .Contactame div p, body .index .Fila .Presentacion, body .index .Fila .Botones div, body .index .Fila .Hero, body .index .Fila .CTA, body .Imagenes h2, .proyectos h2, .proyectos .Fila .columna p, .proyectos .Fila .columna div a, .aboutme h2, .aboutme section div p, .Educacion .Fila .columna p {
   color: white;
   letter-spacing: 2px;
   text-align: center;
@@ -184,6 +184,10 @@ body header .navHamburgesa:has(input:checked) {
   margin: 0;
   box-sizing: border-box;
 }
+.aboutme h2 {
+  animation: AnimacionEntrada 0.6s linear 0s forwards;
+  font-size: 32px;
+}
 .aboutme section {
   display: grid;
   grid-template-rows: 1fr;
@@ -298,6 +302,10 @@ footer div p {
   margin-bottom: 30%;
   height: auto;
 }
+.proyectos h2 {
+  font-size: 32px;
+  animation: AnimacionEntrada 0.6s linear 0s forwards;
+}
 @media (max-width: 1023px) {
   .proyectos {
     width: 100%;
@@ -376,12 +384,21 @@ footer div p {
   background-color: rgba(0, 0, 0, 0.775);
   z-index: 1000;
   position: absolute;
-  font-size: x-small;
   width: 100%;
   bottom: 10%;
   height: 30%;
   text-align: center;
-  font-size: 80%;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .proyectos .Fila .columna div p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 460px) {
+  .proyectos .Fila .columna div p {
+    font-size: 12px;
+  }
 }
 .proyectos .Fila .columna div a {
   text-decoration: none;
@@ -596,6 +613,9 @@ body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(3) {
 .Reseñas section {
   animation: AnimacionEntrada 0.6s linear 0s forwards;
 }
+.Reseñas section h2 {
+  font-size: 32px;
+}
 .Reseñas section div {
   margin: 5%;
   display: grid;
@@ -616,7 +636,8 @@ body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(3) {
   }
 }
 .Reseñas section div p {
-  text-align: start;
+  font-size: 24px;
+  text-align: center;
 }
 .Reseñas section div img {
   max-width: 250px;
