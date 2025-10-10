@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     h2{
-        animation: AnimacionEntrada 0.6s linear 0s forwards;
+        //animation: AnimacionEntrada 0.6s linear 0s forwards;
         @extend .texto;
         font-size: 32px
     }
@@ -35,7 +35,7 @@
                 @extend .texto;
                 text-align: left;
                 margin: 0;
-                animation: AnimacionEntrada 1.2s ease-out 0s none;
+                //animation: AnimacionEntrada 1.2s ease-out 0s none;
                 @media (max-width: 768px){
                     padding: 5%;
                     width: 80%;

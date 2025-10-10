@@ -185,7 +185,6 @@ body header .navHamburgesa:has(input:checked) {
   box-sizing: border-box;
 }
 .aboutme h2 {
-  animation: AnimacionEntrada 0.6s linear 0s forwards;
   font-size: 32px;
 }
 .aboutme section {
@@ -222,7 +221,6 @@ body header .navHamburgesa:has(input:checked) {
   font-size: 20px;
   text-align: left;
   margin: 0;
-  animation: AnimacionEntrada 1.2s ease-out 0s none;
 }
 @media (max-width: 768px) {
   .aboutme section div p {
@@ -304,7 +302,6 @@ footer div p {
 }
 .proyectos h2 {
   font-size: 32px;
-  animation: AnimacionEntrada 0.6s linear 0s forwards;
 }
 @media (max-width: 1023px) {
   .proyectos {
@@ -422,12 +419,10 @@ body .index .Fila div h3 {
   font-size: 24px;
 }
 body .index .Fila .Presentacion {
-  opacity: 0;
   grid-column: Dos/Cuatro;
   text-align: center;
   margin: 5%;
   font-size: larger;
-  animation: AnimacionEntrada 0.6s ease-out 0s forwards;
 }
 @media (max-width: 768px) {
   body .index .Fila .Presentacion {
@@ -436,11 +431,9 @@ body .index .Fila .Presentacion {
 }
 body .index .Fila .Botones {
   margin-top: 5%;
-  opacity: 0;
   display: flex;
   justify-content: space-between;
   grid-column: Uno/Cinco;
-  animation: AnimacionEntrada 0.6s ease-out 0.6s forwards;
 }
 @media (max-width: 560px) {
   body .index .Fila .Botones {
@@ -461,19 +454,15 @@ body .index .Fila .Botones a {
   text-decoration: none;
 }
 body .index .Fila .Hero {
-  opacity: 0;
   grid-column: Uno/Cinco;
   text-align: center;
   font-size: large;
-  animation: AnimacionEntrada 0.6s ease-out 1.2s forwards;
   margin-bottom: 5%;
   padding: 5%;
 }
 body .index .Fila .CTA {
-  opacity: 0;
   grid-column: Uno/Cinco;
   text-align: center;
-  animation: AnimacionEntrada 0.6s ease-out 1.8s forwards;
   padding: 5%;
 }
 body .Imagenes {
@@ -533,9 +522,6 @@ body .Imagenes .Imagenesrotativas .Imagenrotativa:nth-child(3) {
   animation-delay: 10s;
 }
 
-.Contactame {
-  animation: AnimacionEntrada 0.6s linear 0s forwards;
-}
 .Contactame .Fila {
   display: grid;
   grid-template-rows: [uno] 1fr [dos] 1fr;
