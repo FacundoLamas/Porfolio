@@ -482,6 +482,17 @@ body .Imagenes {
 }
 body .Imagenes h2 {
   grid-row: uno/uno;
+  margin-bottom: 10%;
+}
+@media (max-width: 768px) {
+  body .Imagenes h2 {
+    margin-bottom: 20%;
+  }
+}
+@media (max-width: 1024px) {
+  body .Imagenes h2 {
+    margin-bottom: 30%;
+  }
 }
 body .Imagenes .Imagenesrotativas {
   position: relative;

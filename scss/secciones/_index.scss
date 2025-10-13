@@ -86,6 +86,13 @@ body{
         h2{
             @extend .texto;
             grid-row: uno/uno;
+            margin-bottom: 10%;
+            @media (max-width:768px){
+                margin-bottom: 20%;
+            }
+            @media (max-width:1024px){
+                margin-bottom: 30%;
+            }
         }
         
         .Imagenesrotativas {
